@@ -1,38 +1,118 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Russo One', sans-serif;
+  background-color: black;
+}
+
+.main {
+  background: white;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background-color: white;
+  background-image: url('img/weatherApp.svg');
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+}
+
+.info {
+  height: 100vh;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  background-image: url('img/JGGYN.jpg');
+  background-blend-mode: multiply;
+  background-color: rgb(130, 130, 130);
+  background-size: cover;
+  background-position: center;
+  color: lightgray;
+  letter-spacing: 3px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.form {
+  padding: 100px;
+  background-image: url('img/clear-sky-hd-wallpaper.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 100%; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input {
+  height: 40px;
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: transparent;
+  width: 55vh;
+  text-align: center;
+  margin-right: 30px;
+  color: rgb(0, 0, 0);
+  font-family: 'Russo One', sans-serif;
+  font-size: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.input::placeholder {
+  font-family: 'Russo One', sans-serif;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+
 }
 
-.App-link {
-  color: #61dafb;
+.btn {
+  padding: 10px 5px;
+  border-radius: 4px;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Russo One', sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.btn:active {
+  transform: scale(1.0);
+}
+
+.weather_container {
+  margin-top: 30px;
+}
+
+.weather_box {
+  margin-top: 10px;
+  padding: 0 5px 5px 5px;
+  background-color: rgba(136, 136, 135, 0.3);
+}
+
+.p {
+  font-size: 24px;
+  font-style: unset;
+  margin-bottom: 10px;
+  line-height: 50px;
+  color: rgb(199, 199, 199);
+}
+
+.error {
+  color: black;
+  font-size: 18px;
 }
